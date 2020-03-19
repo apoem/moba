@@ -1,0 +1,196 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+html {
+	outline: none;
+	font-size: 13px;
+}
+
+* {
+	box-sizing: border-box;
+}
+//font-size
+
+$base-font-size: 1rem;
+
+$font-size: (
+	xs: 0.7692, //10px
+	s: 0.9231, //12px
+	md: 1, //13px
+	l: 1.0769, //14px
+	xl: 1.2308, //16px
+	xxl: 1.5385
+
+);
+
+@each $key, $val in $font-size {
+	.fs-#{$key} {
+		font-size: $val * $base-font-size;
+	}
+}
+
+//边距
+
+$spacing-type: (
+	m: margin,
+	p: padding
+);
+$spacing-direction: (
+	t: top,
+	b: bottom,
+	l: left,
+	r: right,
+);
+$spacing-base-size: 1rem;
+$spacing-size: (
+	0: 0,
+	1: 0.25,
+	2: 0.5,
+	3: 1,
+	4: 1.25,
+	5: 1.5
+);
+
+@each $typeKey, $typeVal in $spacing-type {
+	@each $key, $val in $spacing-size {
+		.#{$typeKey}-#{$key} {
+			#{$typeVal} : $val * $spacing-base-size
+		}
+
+		.#{$typeKey}x-#{$key} {
+			#{$typeVal}-left : $val * $spacing-base-size;
+			#{$typeVal}-right : $val * $spacing-base-size
+		}
+		.#{$typeKey}y-#{$key} {
+			#{$typeVal}-bottom : $val * $spacing-base-size;
+			#{$typeVal}-top : $val * $spacing-base-size
+		}
+	}
+	//m-0
+	@each $dirKey, $dirVal in $spacing-direction {
+		@each $key, $val in $spacing-size {
+			//mt-1
+			.#{$typeKey}#{$dirKey}-#{$key} {
+				#{$typeVal}-#{$dirVal} : $val * $spacing-base-size
+			}
+				
+			
+		}
+	}
+}
+
+// flex布局
+.d-flex {
+	display: flex;
+}
+.flex-colum {
+	flex-direction: column;
+}
+$flex-jc: (
+	start: flex-start,
+	end: flex-end,
+	center: center,
+	between: space-between,
+	around: space-around,
+);
+@each $key, $val in $flex-jc {
+	.jc-#{$key} {
+		justify-content: $val;
+	}
+}
+$flex-ai: (
+	start: flex-start,
+	end: flex-end,
+	center: center,
+	stretch: stretch
+);
+@each $key, $val in $flex-ai {
+	.ai-#{$key} {
+		align-items: $val;
+	}
+}
+.flex-grow-1 {
+	flex-grow: 1;
+}
+.flex-1 {
+	flex: 1;
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+.sprite{
+  background-size: 375px;
+	background-image: url(../assets/images/index.png);
+	display: inline-block;
+}
+
+.iconfont {
+	font-size: 1.3846rem;
+}
+
+.text-overflow {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	// display: inline-block;
+}
+$text-dir : (
+	center: center,
+	right: right,
+	left: left
+);
+@each $key,$val in $text-dir {
+	.text-#{$key} {
+		text-align: $val;
+	}
+}

@@ -1,0 +1,44 @@
+{
+  "id": "1680952",
+  "name": "王者荣耀",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1991536",
+      "name": "菜单",
+      "font_class": "caidan1",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "13275797",
+      "name": "Menu",
+      "font_class": "Menu",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "1212292",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "2790602",
+      "name": "teacher-one",
+      "font_class": "teacher-one",
+      "unicode": "e657",
+      "unicode_decimal": 58967
+    },
+    {
+      "icon_id": "8777250",
+      "name": "user",
+      "font_class": "icon-test",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    }
+  ]
+}

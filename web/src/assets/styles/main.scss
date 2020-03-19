@@ -1,0 +1,46 @@
+body {
+  background-color: #f1f1f1;
+
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: #000;
+    .sprite-logo{
+      width: 2.3077rem;
+      height: 2.3077rem;
+      background-position: 0 72.588%;
+    }
+    .logo-title {
+      color: #fff;
+      display: block;
+      span {
+        color: #666;
+      }
+    }
+    .sprite-download {
+      width: 4.6154rem;
+      height: 1.8462rem;
+      background-position: 18.73% 71.694%;    
+    }
+
+}
+
+.nav {
+  display: flex;
+  background-color: #db9e3f;
+  color: #fff;
+  position: relative;
+    a {
+      border-bottom: 0.2rem solid transparent;
+    }
+    .active {
+      border-bottom: 0.2rem solid #fff;
+    }
+}
+
+
+ 
