@@ -21,6 +21,9 @@
 </template>
 
 <script>
+if (document.body.clientWidth > 400) {
+  alert('温馨提示：请在手机端浏览网页')
+}
   export default {
     data() {
       return {
